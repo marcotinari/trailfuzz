@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
-
-##### TYPE ./trailfuxx.py -h please
+##### fuzz a page after a preset requests and check response codes/details with a custom request, after each fuzzing request
+##### Hope you'll enjoy!
+##### TYPE ./trailfuzz.py -h please
 
 
 import pycurl
@@ -11,7 +12,7 @@ import urllib
 import csv
 def fuzz(dictionary,outputfile,verbose,listafile,personalcookie):
   # prima   : INSER HERE URI TO FUZZ - FUZZME IS THE PLACEHOLDER
-  prima = 'http://mysite.ontheweb//checkBuyer.do?progPubblic=761&cod=FUZZME&data&code=15002'
+  prima = 'http://mysite.ontheweb/checkBuyer.do?progPubblic=761&cod=FUZZME&data&code=15002'
   # seconda : INSERT HERE URI TO CHECK IF SOMETHING WENT DIFFERENT FROM DEFAULT
   seconda = 'http://mysite.ontheweb/path/jsp/checkMyStatus.jsp'
   buf = cStringIO.StringIO()
@@ -81,11 +82,11 @@ def main(argv):
    try:
       opts, args = getopt.getopt(argv,"hd:w:g:vc:",["FUZZ_dictionary=","get_session_uri_list=","verbose","cookie"])
    except getopt.GetoptError:
-      print 'multipagefuzz.py -d|--dictionary <FUZZ_dictionary.txt> -w <outputfile> -g|--get_session_uri_list <get_session_uri_list.txt> -c|--cookie <cookie> [-v|--verbose]'
+      print 'trailfuzz.py -d|--dictionary <FUZZ_dictionary.txt> -w <outputfile> -g|--get_session_uri_list <get_session_uri_list.txt> -c|--cookie <cookie> [-v|--verbose]'
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print 'multipagefuzz.py -d|--dictionary <FUZZ_dictionary.txt> -w <outputfile> -g|--get_session_uri_list <get_session_uri_list.txt> -c|--cookie <cookie> [-v|--verbose]'
+         print 'trailfuzz.py -d|--dictionary <FUZZ_dictionary.txt> -w <outputfile> -g|--get_session_uri_list <get_session_uri_list.txt> -c|--cookie <cookie> [-v|--verbose]'
          sys.exit()
       elif opt in ("-d", "--dictionary"):
          FUZZ_dictionary = arg
