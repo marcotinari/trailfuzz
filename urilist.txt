@@ -1,0 +1,2 @@
+|http://www.mysite.mycountrucode/welcome/|,,GET
+|http://www.mysite.mycountrucode/music-media/|,,GET

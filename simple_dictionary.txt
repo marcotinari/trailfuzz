@@ -1,0 +1,9 @@
+761
+18010
+%25
+test
+'
+' union select @@version
+union select 1,1,1,1,1
+79100
+' ''' "@
