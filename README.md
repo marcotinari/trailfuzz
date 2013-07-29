@@ -14,8 +14,10 @@ g|--get_session_uri_list <get_session_uri_list.txt> [-c|--cookie <cookie>] [-v|-
 -verbose]
 
 get_session_uri_list.txt example:
-#short request list needed to establish a valid session "state"
+short request list needed to establish a valid session "state"
+
 |http://mysite.example/muri?param=param|,,GET
+
 |http://mysite.example/muurilist|,|postdata=data|,POST
 
 FUZZ_dictionary.txt example
