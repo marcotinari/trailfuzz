@@ -3,7 +3,7 @@ trailfuzz
 
 Fuzz a parameter in a HTTP Request after multiple pages browsing
 
-trailfuzz is a simple script, it may help you fuzzing webpages/uris aren't giving you significative response in the same REQUEST/RESPONSE you are actually fuzzing. I found scripting those actions in presense of anti-CSRF (Cross Site Request Forgery) tokens.
+trailfuzz is a simple script, it may help you fuzzing webpages/uris aren't giving you significative response in the same REQUEST/RESPONSE you are actually fuzzing. I found useful scripting those actions in presense of anti-CSRF (Cross Site Request Forgery) tokens.
 
 dependences
 ----------
