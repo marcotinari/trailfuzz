@@ -36,14 +36,14 @@ payload2
 ATTENTION PLEASE:
 ----------
 you must edit the global vars:
-prima: 'this is the URI you need to fuzz'
+- prima: 'this is the URI you need to fuzz'
 FUZZME is the placeholder and it will be replaced by your payloads
 example: 
 ```
 prima = 'http://mycrazysite.countrycode/path/dynbuyer.do?codBuyer=FUZZME&codProd=112345'
 ```
 
-seconda: 'this is the URI you want to retrive to check if your fuzz was successful and you got something different from wath you usually get'
+- seconda: 'this is the URI you want to retrive to check if your fuzz was successful and you got something different from wath you usually get'
 example: 
 ```
 seconda = 'http://mycrazysite.countrycode/path/checkSuccessfulbid.jsp'
